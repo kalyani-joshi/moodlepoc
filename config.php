@@ -79,7 +79,7 @@ $CFG->upgradekey = 'Q2vod4825G';
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
 
-$CFG->wwwroot   = 'http://moodleazureappdemo.azurewebsites.net';
+$CFG->wwwroot   = 'https://moodleazureappdemo.azurewebsites.net';
 //  http://10.248.0.29/devkauppiasvalmennus https://www.kauppiasvalmennus.kesko.fi
 //20.82.90.201
 
