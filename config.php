@@ -39,14 +39,14 @@ $CFG = new stdClass();
 // will be stored.  This database must already have been created         //
 // and a username/password created to access it.                         //
 
-$CFG->dbtype    = 'mariadb';      // 'pgsql', 'mariadb', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
+$CFG->dbtype    = 'mysqli';      // 'pgsql', 'mariadb', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
 $CFG->dblibrary = 'native';     // 'native' only at the moment
-$CFG->dbhost    = '127.0.0.1';  // eg 'localhost' or 'db.isp.com' or IP
-$CFG->dbname    = 'devkauppiasvalmennus';     // database name, eg moodle
+$CFG->dbhost    = 'mysqlmoodledb.mysql.database.azure.com';  // eg 'localhost' or 'db.isp.com' or IP
+$CFG->dbname    = 'moodledb';     // database name, eg moodle
 #$CFG->dbname = 'testdb';
 
-$CFG->dbuser    = 'kauppiasval';   // your database username
-$CFG->dbpass    = 'h8t0yovycqt8maaq';   // your database password
+$CFG->dbuser    = 'sarikagaikwad';   // your database username
+$CFG->dbpass    = 'root@123';   // your database password
 $CFG->prefix    = 'mdl_';       // prefix to use for all table names
 $CFG->dboptions = array(
     'dbpersist' => false,       // should persistent database connections be
@@ -60,9 +60,12 @@ $CFG->dboptions = array(
                                 //  if dbhost is 'localhost' - if you need
                                 //  local port connection use '127.0.0.1')
     'dbcollation' => 'utf8mb4_unicode_ci',//Made db collation as utf8mb4 for emoji support
-    'dbport'    => '',          // the TCP port number to use when connecting
+    'dbport'    => '3306',          // the TCP port number to use when connecting
                                 //  to the server. keep empty string for the
                                 //  default port
+    'ssl' => 'true',
+    'sslcapath' => '/home/dataroot',	
+    'sslca'=>'/home/dataroot/DigiCertGlobalRootCA.crt.pem',	
 								
 );
 $CFG->tool_generator_users_password ='moodle';
@@ -97,7 +100,7 @@ $CFG->wwwroot   = 'https://moodleazureappdemo.azurewebsites.net';
 //
 // - On Windows systems you might specify something like 'c:\moodledata'
 
-$CFG->dataroot  = '/opt/kauppiasvalmennus/devkauppiasvalmennus';
+$CFG->dataroot  = '/home/site/wwwroot';
 
 
 //=========================================================================
