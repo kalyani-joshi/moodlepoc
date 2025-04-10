@@ -63,11 +63,12 @@ $CFG->dboptions = array(
     'dbport'    => '3306',          // the TCP port number to use when connecting
                                 //  to the server. keep empty string for the
                                 //  default port
-    'ssl' => 'true',
+    
     'sslcapath' => '/home/dataroot',	
     'sslca'=>'/home/dataroot/DigiCertGlobalRootCA.crt.pem',	
 								
 );
+$CFG->dboptions['ssl'] = true;
 $CFG->tool_generator_users_password ='moodle';
 $CFG->upgradekey = 'Q2vod4825G';
 
