@@ -99,7 +99,7 @@ class moodle_exception extends Exception {
      */
     function __construct($errorcode, $module='', $link='', $a=NULL, $debuginfo=null) {
         global $CFG;
-
+        print_r($CFG);
         if (empty($module) || $module == 'moodle' || $module == 'core') {
             $module = 'error';
         }
