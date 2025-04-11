@@ -68,7 +68,7 @@ $CFG->dboptions = array(
     'sslca'=>'/home/dataroot/DigiCertGlobalRootCA.crt.pem',	
 								
 );
-$CFG->dboptions['ssl'] = true;
+$CFG->dboptions['ssl'] = 'require';
 $CFG->tool_generator_users_password ='moodle';
 $CFG->upgradekey = 'Q2vod4825G';
 
@@ -101,7 +101,7 @@ $CFG->wwwroot   = 'https://moodleazureappdemo.azurewebsites.net';
 //
 // - On Windows systems you might specify something like 'c:\moodledata'
 
-$CFG->dataroot  = '/home/site/wwwroot';
+$CFG->dataroot  = '/home/site/wwwroot/dataroot';
 
 
 //=========================================================================
@@ -487,10 +487,10 @@ $CFG->admin = 'admin';
 //=========================================================================
 //
 // Force a debugging mode regardless the settings in the site administration
-// @error_reporting(E_ALL | E_STRICT); // NOT FOR PRODUCTION SERVERS!
-// @ini_set('display_errors', '1');    // NOT FOR PRODUCTION SERVERS!
-//$CFG->debug = (E_ALL | E_STRICT);   // === DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
- //$CFG->debugdisplay = 1;             // NOT FOR PRODUCTION SERVERS!
+ @error_reporting(E_ALL | E_STRICT); // NOT FOR PRODUCTION SERVERS!
+ @ini_set('display_errors', '1');    // NOT FOR PRODUCTION SERVERS!
+$CFG->debug = (E_ALL | E_STRICT);   // === DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
+ $CFG->debugdisplay = 1;             // NOT FOR PRODUCTION SERVERS!
 //
 // You can specify a comma separated list of user ids that that always see
 // debug messages, this overrides the debug flag in $CFG->debug and $CFG->debugdisplay
